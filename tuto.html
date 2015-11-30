@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Exercice HTML</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--
+	<nav>
+		<ul>
+			<li><a>HTML</a>
+				<ul>
+					<li><a>Les balises</a></li>
+					<li><a>Les attributs de balise</a></li>
+					<li><a>Autres balises</a></li>
+				</ul>
+			</li>
+			<li><a>CSS</a>
+				<ul>
+					<li><a>Syntaxe et règles</a></li>
+					<li><a>Les selecteurs</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+-->
+	<section class="container">
+		<h1>Cours sur le HTML</h1>
+		<h2>Les balises</h2>
+		<div>
+			L’Hypertext Markup Language, généralement abrégé HTML, est le format de données conçu pour représenter les pages web. Il est composé de balises permettant de structurer le contenu des pages.
+			<h3>Balises ouvrantes et fermantes</h3>
+			<code>
+			&#x3C;div&#x3E; (balise ouvrante)<br>
+			&#x9;Contenu<br>
+			&#x3C;/div&#x3E; (balise fermante)<br>
+			</code>
+			<h3>Balises autofermantes</h3>
+			<code>
+			&#x3C;img/&#x3E;(balise autofermante)
+			</code>
+		</div>
+		<h2>Attributs de balises</h2>
+		<div>
+			Les attributs permettent de préciser les propriétés des éléments HTML.
+			Pour le cas de &#x3C;img/&#x3E;, l'attribut « src » permet de préciser la source (provenance) de l'image ou le « alt ». Si ce dernier attribut est obligatoire, il en existe des facultatifs comme l'attribut « title » permettant de renseigner sur la nature ou le contenu de l'image avec une infobulle. Ces différents attributs peuvent être additionnés et sont séparés par des espaces. Ils fonctionnent sur un système de clé/valeur.
+			<code>&#x3C;img src=&#x22;fichier.jpg&#x22; alt=&#x22;Description de l&#x27;image&#x22; title=&#x22;Mon image&#x22;/&#x3E; <br>
+			&#x9;src=&#x22;fichier.jpg&#x22; (Ici la cl&#xE9; est &#x27;src&#x27; et la valeur est &#x27;fichier.jpg&#x27;)</code>
+		</div>
+		<h2>Les selecteurs id et class</h2>
+		<div>
+			Les sélecteurs permettent d'interagir avec le contenu avec CSS et JS.
+
+			<p>L'attribut « id » identifie un élément de manière unique, alors que « class » permet une mise en forme (avec CSS par exemple)</p>
+
+			<code>class=&#x22;class1 class2 class3&#x22;<br>
+			&#x9;id=&#x22;menu&#x22;</code>
+		</div>
+			<h2>Autres balises</h2>
+		<div>
+			Il existe beaucoup d'autres balises, elles ont toute un sens sémantique pour le navigateur et permettent de mieux structurer notre page.
+			<code>&#x3C;div&#x3E; &#x9;&#x9;&#x2192;  Bloc <br>
+			&#x3C;span&#x3E;&#x9;&#x9;&#x2192;  Bout de texte inline<br>
+			&#x3C;br&#x3E;&#x9;&#x9;&#x2192;  Retour chariot<br>
+			&#x3C;nav&#x3E;&#x9;&#x9;&#x2192;  Element de navigation<br>
+			&#x3C;blockquote&#x3E;&#x9;&#x2192;  Citation<br>
+			&#x3C;p&#x3E;&#x9;&#x9;&#x2192;  Paragraphe<br>
+			&#x9;
+			</code>
+		</div>
+		<h1>Cours sur le CSS</h1>
+		<h2>Syntaxe et règles</h2>
+		<div>
+			Les feuilles de style en cascade, généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML. On appelle cela ainsi, car le navigateur va lire le document de haut en bas. Ceux qui ont la plus grande priorité sont en bas. En voici la syntaxe :
+			<code>selecteur {<br>
+			&#x9;&#x9;propri&#xE9;t&#xE9;:valeur;<br>
+			&#x9;}</code>
+		</div>
+			<h2>Les selecteurs</h2>
+		<div>
+			Les classes, qu'on a abordées plus haut, vont permettre de styliser précisément un ou plusieurs éléments de la page. Pour cela, on va utiliser les sélecteurs. En CSS désigne une class avec un (.) et un id avec un (#).
+			<code>
+			Dans mon HTML&#xA0;:<br>
+			&#x9;&#x3C;p class=&#x22;class1&#x22;&#x3E;Hello&#x3C;/p&#x3E;<br>
+			<br>
+			&#x9;Dans mon CSS&#xA0;:<br>
+			&#x9;.class1 { <br>
+			&#x9;&#x9;color:red;<br>
+			&#x9;}<br>
+			</code>
+		</div>
+		</div>
+		<h2>Les pseudos sélecteurs</h2>
+		<div>
+			Les pseudos sélecteurs permettent de sélectionner un élément selon son état (cliqué, visité...etc). Ils s'écrivent juste après l'élément avec ':pseudo-selecteur'
+			<code>
+			Exemple&#xA0;:<br>
+			<br>
+			&#x9;/* lien non-visit&#xE9;*/<br>
+			&#x9;a:link {<br>
+			&#x9;&#xA0;&#xA0;&#xA0; color: #FF0000;<br>
+			&#x9;}<br>
+			<br>
+			&#x9;/* lien visit&#xE9; */<br>
+			&#x9;a:visited {<br>
+			&#x9;&#xA0;&#xA0;&#xA0; color: #00FF00;<br>
+			&#x9;}<br>
+			<br>
+			&#x9;/* curseur sur le lien */<br>
+			&#x9;a:hover {<br>
+			&#x9;&#xA0;&#xA0;&#xA0; color: #FF00FF;<br>
+			&#x9;}<br>
+			<br>
+			&#x9;/* lien selectionn&#xE9; */<br>
+			&#x9;a:active {<br>
+			&#x9;&#xA0;&#xA0;&#xA0; color: #0000FF;<br>
+			&#x9;}<br> </code>
+		</div>
+		<h2>Le box-model</h2>
+		<div>
+			En CSS, une boîte est constituée de quatre contours, « le contour de la marge », « le contour de la bordure », « le contour de l'espacement » et « le contour du contenu » comme illustré par le schéma ci-dessous :
+			<img src="boxmodel-image.png">
+			<p>La propriété CSS box-sizing est utilisé pour modifier le modèle de boîte CSS par défaut qui est utilisé pour calculer la largeur et la hauteur des éléments. Il est possible d'utiliser cette propriété pour émuler le comportement des navigateurs qui n'appliquent pas correctement la spécification du modèle de boîte CSS.</p>
+		</div>
+		<h2>Centrer un bloc en CSS</h2>
+		<div>
+			Pour centrer un bloc 'div' en css, il faut lui définir une taille 'width' et lui appliquer la propriété 'margin' avec pour valeur 'auto'
+			<code>
+			element {<br>
+			&#x9;width:200px;<br>
+			&#x9;margin:auto;<br>
+			}<br>
+			</code>
+		</div>
+		<h1>Computer science</h1>
+		<h2>DRY : Don't Repeat Yourself !</h2>
+		<div>
+			Ne vous répétez pas (don’t repeat yourself en anglais, aussi désigné par l’acronyme DRY) est une philosophie en programmation informatique consistant à éviter la redondance de code au travers de l’ensemble d’une application afin de faciliter la maintenance, le test, le débogage et les évolutions de cette dernière.
+		</div>
+		<h2>SoC : Separation of Concerns</h2>
+		<div>
+			Approche pour concevoir une solution ou un service informatique, qui divise le problème en morceaux pouvant être résolus indépendamment. Cette approche sépare le « quoi » de la conception du « comment » de la conception.
+		</div>
+	</section>
+</body>
+</html>
